@@ -19,3 +19,7 @@ export default promisify((resolve, reject) => {
     reject(err);
   }
 });
+
+import post from "./mongo-models/post.mjs";
+import user from "./mongo-models/user.mjs";
+import vote from "./mongo-models/vote.mjs";
