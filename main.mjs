@@ -18,6 +18,13 @@ import { fileURLToPath } from "url";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 app.use(express.static(path.join(__dirname, "public")));
 
+import post from "./mongo-models/post.mjs";
+import user from "./mongo-models/user.mjs";
+import vote from "./mongo-models/vote.mjs";
+
+import postsRoute from './routes/posts.mjs';
+app.use('/posts', postsRoute);
+
 const PORT = process.env.PORT || 4922;
 app.listen(PORT, () =>
   console.log(`server listening on http://localhost:${PORT}`)
