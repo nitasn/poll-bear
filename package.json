@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon -r dotenv/config main.mjs",
+    "prod": "node -r dotenv/config main.mjs"
   },
   "keywords": [],
   "author": "",
@@ -18,5 +19,8 @@
     "mongodb": "^4.12.0",
     "mongoose": "^6.7.2",
     "node-fetch": "^3.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
   }
 }
