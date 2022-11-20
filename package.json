@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "nodemon -r dotenv/config main.mjs",
     "prod": "node -r dotenv/config main.mjs"
@@ -18,6 +19,7 @@
     "jsonwebtoken": "^8.5.1",
     "mongodb": "^4.12.0",
     "mongoose": "^6.7.2",
+    "morgan": "^1.10.0",
     "node-fetch": "^3.3.0"
   },
   "devDependencies": {

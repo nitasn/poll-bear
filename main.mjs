@@ -12,6 +12,9 @@ import express from "express";
 const app = express();
 app.use(express.json());
 
+import morgan from "morgan";
+app.use(morgan('tiny')); // log out every http request
+
 // servse static files (from the folder `public`)
 import path, { dirname } from "path";
 import { fileURLToPath } from "url";
